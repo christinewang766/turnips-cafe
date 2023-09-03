@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import pigIcon from "../public/pig.svg";
 import turnipIcon from "../public/turnip.svg";
+import AboutMe from "./AboutMe";
 
 // NAVBAR HEIGHT IS 110px
 const Navbar = () => {
@@ -33,9 +34,10 @@ const Navbar = () => {
           <Image width={hoverPig} src={turnipIcon} alt="SVG turnip" />
         </button>
       </div>
-      <button className="fixed mt-[110px] align-middle bg-black border-hot-pink border-[18px] pl-4 pr-5 font-poe text-[40px] text-white z-50">
+      <button className="fixed mt-[110px] align-middle bg-black border-hot-pink border-[18px] pl-4 pr-5 font-poe text-[40px] text-white z-50 transition ease-in-out duration-300 hover:bg-hot-pink hover:border-white hover:text-black">
         C
       </button>
+      <AboutMe />
     </>
   );
 };
