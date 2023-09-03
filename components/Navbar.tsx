@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <>
-    <div className="fixed top-0 w-full bg-white border-[18px] border-black h-auto flex justify-between">
+    <div className="fixed top-0 w-full bg-white border-[18px] border-black h-auto flex justify-between z-50">
       <button className="text-black font-poe text-[50px] pl-3" onClick={scrollToTop}>
         TURNIPS CAFE
       </button>
@@ -22,7 +22,7 @@ const Navbar = () => {
         <Image src={pigIcon} alt="SVG pig" />
       </button>
     </div>
-    <button className="fixed mt-[110px] align-middle bg-black border-hot-pink border-[18px] pl-4 pr-5 font-poe text-[40px] text-white">
+    <button className="fixed mt-[110px] align-middle bg-black border-hot-pink border-[18px] pl-4 pr-5 font-poe text-[40px] text-white z-50">
         C
       </button>
       </>
