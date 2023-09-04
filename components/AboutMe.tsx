@@ -1,12 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import profile from "../public/profile.jpg";
+import { ImCross } from "react-icons/im";
 
-const AboutMe = () => {
+const AboutMe = (props: { openBio: boolean, toggle: () => void }) => {
+
   return (
     <>
+    {props.openBio &&
       <div className="fixed flex mt-[110px] w-[400px] h-[70%] items-center justify-center bg-black border-hot-pink border-[18px] z-50 ">
         <div className="flex flex-col h-[100%] w-[100%] items-center justify-center p-7">
+          <button className="absolute top-2 right-2" onClick={props.toggle}>
+            <ImCross style={{ color: "white" }} size={15} />
+          </button>
           <div className="flex flex-col items-center justify-center w-[320px] h-[100%] bg-black rounded-lg border-white border-[10px]">
             <Image
               src={profile}
@@ -28,6 +34,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
+      }
     </>
   );
 };
